@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr1[N];
+    for(int i=0; i<=N-1;i++)
+    {
+        scanf("%d", arr1[i]);
+    }
+    for(int i=0; i<N; i++)
+    {
+         for(cmpindex= i+1; cmpindex<N; cmpindex++) //cmpindex(just a loop variable) always stats from index 1
+         {
+             if(arr[i]>arr[cmpindex])// first process ascending ordering the elements 
+             {
+                 int larger= arr[i];
+                 arr[i]=arr[cmpindex];
+                 arr[cmpindex]=larger;
+             }
+         }
+         for(int i=0; i<N;i++)// second process check whether it has difference between 2 elements 0 or 1 if not it non contiguous         {
+             if(arr[i+1]-(arr[i])!=0 && (arr[i+1]-arr[i])!=1)// compare 2nd and 1st arr elements *imp cmpindex is a loop variable not an array
+             printf("No");
+         }
+         printf("yes");
+    }
+
+}
