@@ -22,7 +22,7 @@ int main()
              }
          }
     }
-         for(int i=0; i<N;i++)/* second process check whether it has difference between 2 elements 0 or 1 if not it non contiguous*/     
+         for(int i=0; i<N-1;i++)/* for comparing always till N-1 ex N=3 a[0]=1 a[1]=2 a[2]=3 (2 comparison 3-1)  , second process check whether it has difference between 2 elements 0 or 1 if not it non contiguous*/     
          {
              if(arr[i+1]-arr[i]!=0 && arr[i+1]-arr[i]!=1)/* compare 2nd and 1st arr elements *imp cmpindex is a loop variable not an array*/
              {
