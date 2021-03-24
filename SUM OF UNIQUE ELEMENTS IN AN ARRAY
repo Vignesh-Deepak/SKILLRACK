@@ -1,0 +1,22 @@
+int N;
+scanf("%d",&N);
+int numcount[100]={0};        // hint 1 . array index can be 0 to 99 or 1 to 100(best)
+int currnum;          
+for(int i=1; i<=N;i++)        //hint 2. array index here starts from 1 to <=N (eg for 1 to 100 , for 0 to99 it starts 0 <100)  
+{
+   scanf("%d",currnum);       //hint 3. while getting the currnum for given boundary , we are updating the numcount values from 0 to 1 or to based on occurence
+   numcount[currnum]++;      // hint 4. ex {1,2,1}  a[1] = 1 or a[0] =1 Based on user or given prefered boundary,  a[2]= 2 ,  a[3] =1  (but here in these sum these format is not apllicable
+                             // hint 5. numcount[1] =1 , numcount[2]=2 numcount[1] =2 (here index is based on currnum) ********important
+                             // hint 6. if values already given [3, 7 9]  then numcount[3]=1 not as numcount[1] or numcount[0]= 3
+}
+int sum = 0;
+for( int val=1 ; val<=100; val++)
+{
+  if(numcount[val]==1)
+  {
+    sum+=val;
+    }
+}
+printf(" %d ", sum);
+return 0;
+}
