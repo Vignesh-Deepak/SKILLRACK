@@ -1,0 +1,34 @@
+
+int main()               // SIMILAR TO CONTIGUOS ARRAY PROBLEM
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    for(int i=0; i<=N-1;i++)      
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<N;i++)     // HINT 1 IN COMPARING -> ALWAYS INDEX i+1 from 2nd index to 1st index 
+    {
+        for(int cmpindex=i+1; cmpindex<N;cmpindex++)
+        {
+            if(arr[i]>arr[cmpindex]){  //hint 2 = 1st process check for all elements in descending order (higher to low) 
+            int paircount=0;            // hint 3= 2nd process we just count pair (bet 2 numbers in descending order) not sorting in that order, just checking in that order
+            paircount++;
+                
+            }
+        }
+    }
+    printf(" %d",paircount);
+    return 0;
+    
+
+}       
+test cases n=5
+2 8 7 5 6
+5 pairs 
+explanation 
+2>8 f, 2>7 f, 2>5 f 2>6 f
+8>7 t , 8>5 t , 8>6 t   (here (8,7) (8,5) (8,6) 3 pairs
+7>5 t, 7>6 t (here (7,5) (7,6) 2 pairs)   
+totally 5 pairs count
