@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+  int N;
+  int arr1[N];
+  scanf("%d",&N);
+  for(int i=0; i<N;i++)
+  {
+      scanf("%d",&arr1[i]);
+  }
+  for(int i=0;i<N-1;i++){                          // n-1 is best for memory waste reduction or <n also no problem it executes
+                                                   // here ex N=6 so cmp from i=1 to 5  5 comparison 
+   for(int cmpindex=1; cmpindex<N;cmpindex++)
+    {
+      if (arr1[i]>arr1[cmpindex])
+      {
+          int larger=arr1[i];
+          arr1[i]=arr1[cmpindex];
+          arr1[cmpindex]=larger;
+      }
+    }
+  }
+  if(N%2!=0)
+  {
+      printf("%d",arr1[N/2]);
+  }
+  else
+  {
+      printf("%d %d",arr1[N/2-1], arr1[N/2]); // N/2 then -1 means after finding even reducing the index to previous   
+  }
+}
