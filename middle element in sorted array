@@ -9,7 +9,7 @@ int main()
   for(int i=0; i<N;i++)
   {
       scanf("%d",&arr1[i]);
-  }
+  }                                                  // for clarification trace the code n=5   98 26 47 29 10
   for(int i=0;i<N-1;i++){                          // n-1 is best for memory waste reduction or <n also no problem it executes
                                                    // here ex N=6 so cmp from i=1 to 5  5 comparison 
    for(int cmpindex=1; cmpindex<N;cmpindex++)
