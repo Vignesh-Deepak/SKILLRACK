@@ -4,7 +4,7 @@
 int main()
 {
   int N;
-  scanf("%d",&N);
+  scanf("%d",&N); // it should be here only 
   int arr1[N];
   for(int i=0; i<N;i++)
   {
@@ -28,6 +28,6 @@ int main()
   }
   else
   {
-      printf("%d %d",arr1[N/2-1], arr1[N/2]); // N/2 then -1 means after finding even reducing the index to previous   
+      printf("%d %d",arr1[N/2-1], arr1[N/2]); // N/2 then -1 means after finding even reducing the index to previous   // %d space is too important for passing test cases
   }
 }
