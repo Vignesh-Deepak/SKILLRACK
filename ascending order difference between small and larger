@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N];
+    for(int i=0; i<=N-1;i++)            
+    {
+        scanf("%d", &arr[i]);
+    }
+    for(int i=0; i<N; i++)
+    {
+         for(int cmpindex= i+1; cmpindex<N; cmpindex++) /*cmpindex(just a loop variable) always stats from index 1*/
+         {
+             if(arr[i]>arr[cmpindex])/*first process ascending ordering the elements*/ 
+             {
+                 int larger= arr[i];
+                 arr[i]=arr[cmpindex];
+                 arr[cmpindex]=larger;
+             }
+         }
+    }
+    
+    printf("%d", arr[N-1]-arr[0]);       //  for(int i=0; i<N; i++) { printf("%d",arr[i];}  print all element           //  for(int i=0; i<N; i++) { printf("%d",arr[N-1]-arr[0];}
+                                                                                                                                   print for n number of times
+                                                                                                                                   eg 3
+                                                                                                                                   1 2 3
+                                                                                                                                   2 2 2 o/p
+}    
