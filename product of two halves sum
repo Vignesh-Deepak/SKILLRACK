@@ -19,7 +19,7 @@ int main()
     }
     if(left==right)
     {
-      rightsum+=arr[right];   
+      rightsum+=arr[right]; //also [left]can be used because both are same    
     }
     printf("%d", leftsum*rightsum);
     
