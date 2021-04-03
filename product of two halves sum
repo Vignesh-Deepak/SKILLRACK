@@ -6,8 +6,8 @@ int main()
     int N;
     scanf("%d",&N);
     int arr[100];
-    for(int i=0; i<N;i++)
-    {
+    for(int i=0; i<N;i++)                     //int i=0, while(scanf("%d",&arr[i]==1)){  i++} as per their logics they didnt get input from user
+    {                          
         scanf("%d",&arr[i]);
     }
     int i,left =0, right= i-1;
