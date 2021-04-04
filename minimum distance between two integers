@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr[N],X,Y;
+    for(int i=0;i<=N-1;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    scanf(" %d %d",&X,&Y);                                     // n=10 x =8 y=12 8 9 5 12 8 4 21 6 2 12
+    int ind1, ind2;
+    int currdist,mindist=N;
+    for(int i=0;i<=N;i++)
+    {
+        if(arr[i]==X)
+          ind1=i;
+        else if(arr[i]==Y)
+          ind2=i;
+        else
+          continue;        //skips current iteration and continue with next index , also it doesnt execute below tell it fails 
+        if(ind1<N && ind2<N) // it is optional because it is inside the for loop
+        {
+            currdist=abs(ind1-ind2)+1;  // absolute take only positive value eg 3-5 =-2  result +2
+            if(currdist<mindist)
+            mindist=currdist;
+        }
+         
+          
+    }
+    printf("%d",mindist);
+    return 0;
+    
+    
+    
+    
+
+}
