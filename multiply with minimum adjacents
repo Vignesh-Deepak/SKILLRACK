@@ -1,0 +1,22 @@
+int main()
+{
+int N;
+scanf("%d",&N);
+int arr[N];
+for(int i=0;i<=N;i++)
+{
+  scanf("%d",&arr[i]);
+}
+printf("%d ",  arr[0]-arr[1]); // first 2 elemts multiplication
+for (int i=1; i<N-1;i++)
+{
+  printf("%d ", arr[i]* (arr[i+1]<arr[i-1]? arr[i+1] : arr[i-1]));  
+  }
+printf("%d ", arr[N-1]*arr[N-2]);   // last 2 elemts multiplication 
+}
+// N=6
+// 7 6 4 5 9 3
+// 42 24 20 20 27 27  
+  
+  1 7x6
+  2 6 check for min adjacent 7>4 so 4 is min  6X4
