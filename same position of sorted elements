@@ -15,7 +15,7 @@ int main()
         scanf("%d ",&arr2[i]);
     }
     
-    for(int i=0;i<N;i++)
+    for(int i=0;i<N;i++)                                 // here the o/p prints for n number of times eg YES YES YES YES YES YES
     {
         for(int cmpindex=1;cmpindex<N-1;cmpindex++)
           {
@@ -30,8 +30,8 @@ int main()
     
     for(int i=0;i<N;i++)
     {
-        for(int cmpindex=1;cmpindex<N-1;cmpindex++)
-        {
+        for(int cmpindex=i+1;cmpindex<=N-1;cmpindex++)    //cmpindex=i+1; cmpindex<N or cmpindex<=N-1
+         {
             if(arr2[i]>arr2[cmpindex])
             {
                 int larg=arr2[i];
@@ -40,8 +40,8 @@ int main()
             }
         }
     }
-    
-    for (int i=0;i<N;i++)
+    1 option is for yes yes yes yes yes yes yes yes 
+    for (int i=0;i<N;i++)                                                                           
     {
         for(int j=0;j<N;j++)
         {
@@ -53,6 +53,26 @@ int main()
     }
     
 }
+
+2 option is best
+int a=0;
+    for(int i=0;i<N;i++)
+    {
+        if(arr1[i]>arr2[i])
+        {
+            a++;
+            break;
+        }
+        else
+           continue;
+    }
+        
+    if(a!=0)
+     printf("NO");
+    else
+     printf("YES");
+     
+
 arr1[5]={ 1 2 3 4 5}
 arr2[5]={ 4 5 6 7 9}
 1st sort both in ascending order
