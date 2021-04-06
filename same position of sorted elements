@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int arr1[N],arr2[N];
+    for(int i=0;i<=N-1;i++)
+    {
+        scanf("%d ",&arr1[i]);
+    }
+    for(int i=0;i<N;i++)
+    {
+        scanf("%d ",&arr2[i]);
+    }
+    
+    for(int i=0;i<N;i++)
+    {
+        for(int cmpindex=1;cmpindex<N-1;cmpindex++)
+          {
+              if( arr1[i]>arr1[cmpindex])
+              {
+                  int larg=arr1[i];
+                  arr1[i]=arr1[cmpindex];
+                  arr1[cmpindex]=larg;
+              }
+          }  
+    }
+    
+    for(int i=0;i<N;i++)
+    {
+        for(int cmpindex=1;cmpindex<N-1;cmpindex++)
+        {
+            if(arr2[i]>arr2[cmpindex])
+            {
+                int larg=arr2[i];
+                arr2[i]=arr2[cmpindex];
+                arr2[cmpindex]=larg;
+            }
+        }
+    }
+    
+    for (int i=0;i<N;i++)
+    {
+        for(int j=0;j<N;j++)
+        {
+            if(arr1[i]<=arr2[j])
+              printf("YES");
+            else
+              printf("NO");
+        }
+    }
+    
+}
+arr1[5]={ 1 2 3 4 5}
+arr2[5]={ 4 5 6 7 9}
+1st sort both in ascending order
+then cmp 1 arr element is less than or equal to if so then print yes
