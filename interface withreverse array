@@ -1,0 +1,69 @@
+3 options
+1st option
+
+int main()
+{
+  int M,N;                           // here M &N are inputs are only getting only
+                                     // eventhough we are getting m= 5 & n=8 it does not effect or include in the output
+  scanf("%d %d", M,N);
+  int arr1[5]={51, 48, 35, 79, 12};
+  int arr2[8]={85, 64, 23, 31, 93, 84, 34.70};
+  
+  for(int i=0;i<8;i++)
+  {
+    if(i<5)
+      printf("%d", arr[i]);      
+    else
+      printf("%d", arr[i]);
+  }    
+2nd option
+int main()
+{
+  int a;
+  scanf("%d",&a);
+  int a1[50];
+  for(int i=a-1;i>=0;i--)
+  {
+    scanf("%d",&a1[i]);        here WHILE GETTING INPUT WE REVERSE IT    > MEANS IN RUNTIME   5 
+                                                                                              1 2 3 4 5 (IN RUNTIME WE INPUT  IN OUR OWN ORDER) BUT STORE IN REVERSE ORDER
+                                                                                              FOR CHECKING IT WE PRINT IN NXT FOR LOOP
+    }
+  for(int i=0;i<a;i++)
+  {
+    printf("%d",a1[i]);
+    }
+ }
+ 
+ 3 RD OPTION
+ int main()
+ {
+   int M,N;
+  scanf("%d %d",&M,&N);
+  int arr1[M],arr2[N];
+  for(int i=0;i<N;i++)
+  {
+     scanf("%d",&arr1[i]);
+  }
+  
+  for(int i=N-1;i>=0;i--)
+  {
+    scanf("%d",&arr2[i]);
+   }
+  int a;
+   
+  if(M<N)
+   a=N;
+  else
+   a=M;
+  for(int i=0; i<a;i++)
+  {
+     if(i<M)
+     printf("%d ", arr1[i]);
+     if(i<N)
+     printf("%d ", arr2[i]);               here both print next to next because no \n is is included  eg 51 85
+    }
+ 
+  
+ 
+ 
+ 
