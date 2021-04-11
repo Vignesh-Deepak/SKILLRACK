@@ -14,7 +14,7 @@ int main()
     {
         scanf("%d", &arr2[i]);
     }
-    for(int i=0;i<=N-1;i++)
+    for(int i=0;i<=N-1;i++)   // here one for loop used for to compare two index so i=0 to N-1 
     {
         if(arr1[i] == arr2[N-i-1]){
         printf("%d", arr1[i]);  // error because no space between array elements (printf("%d ", arr1[i]);    another thing if printf("%2d " >it restrict to only 2 outputs
