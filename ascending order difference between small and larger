@@ -12,7 +12,8 @@ int main()
     }
     for(int i=0; i<N; i++)
     {
-         for(int cmpindex= i+1; cmpindex<N; cmpindex++) /*cmpindex(just a loop variable) always stats from index 1*/
+         for(int cmpindex= i+1; cmpindex<N; cmpindex++) /*cmpindex(just a loop variable) always starts from index 1*/ // here two for loop , 2nd for loop can be till N or N-1
+                                                        // only problem in count max contiguous even number, there only <N fails, for all it satisfies because loop terminates and directly to output , that is> when no operation needed when required is founded , both(any one) can be used for printf, when last element to be compared with >N 
          {
              if(arr[i]>arr[cmpindex])/*first process ascending ordering the elements*/ 
              {
