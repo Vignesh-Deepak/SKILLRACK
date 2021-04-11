@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N,currcount=1,max=0;  //  here currcount=1 because when comparing both even continuos even we wont say it as on even num so, initially it starts with 1
+    scanf("%d ",&N);
+    int arr[N];
+    for(int i=0;i<N;i++)  
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+    for(int i=0;i<N;i++)     // // here i<N compare one index at a time  , i<N-1 for comparing 2 index at a time (means both must be true) 
+    {
+        if(arr[i]%2==0 && arr[i+1]%2==0)
+        {
+            currcount++;
+        }
+        else
+        {
+            if(currcount>max)
+            {
+              max=currcount;
+            }
+            currcount=1;
+                         
+        }
+        
+        currcount=1;
+        printf("%d ",(max>currcount)? max:currcount);  
+    }
+
+}
+
+
+test case   2 10 3 4 6 8     
+i=0 & i=1 
+currcount =1+1;
+i=1 & i=2
+currcount=2 > max
+max=2;
+i=2 i =3 (here currcount becomes again 1 because no continuos even no )
+currcount 1 > max=2 (false)
+i=3 i=4 
+currcount =1+1;
+i=4 i=5 
+currcount 2+1;
+
+here elements ends with even number so,  to find max 
+we use ternary in direct printf 
+here max=2 ,currcount=3;
