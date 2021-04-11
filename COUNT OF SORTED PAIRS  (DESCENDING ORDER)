@@ -10,7 +10,7 @@ int main()               // SIMILAR TO CONTIGUOS ARRAY PROBLEM
     }
     for(int i=0;i<N;i++)     // HINT 1 IN COMPARING -> ALWAYS INDEX i+1 from 2nd index to 1st index 
     {
-        for(int cmpindex=i+1; cmpindex<N;cmpindex++)   cmpindex<N-1 or <=N-2 (always)  for clarification trace the code
+        for(int cmpindex=i+1; cmpindex<N;cmpindex++) (<N ,cmpindex<N-1 or <=N-2) (always)  for clarification trace the code (*imp <N is also used because 
         {
             if(arr[i]>arr[cmpindex]){  //hint 2 = 1st process check for all elements in descending order (higher to low) 
             int paircount=0;            // hint 3= 2nd process we just count pair (bet 2 numbers in descending order) not sorting in that order, just checking in that order
@@ -20,13 +20,13 @@ int main()               // SIMILAR TO CONTIGUOS ARRAY PROBLEM
         }
     }
     printf(" %d",paircount);
-    return 0;
-    
+    return 0;                                          // when one for loop used for compare two index we use i=0 to N-1 
+                                                       // when two for loop used for comparing we can also same or in second for loop till N-1  
 
 }       
 test cases n=5
-2 8 7 5 6
-5 pairs 
+2 8 7 5 6                                                                      (i=0 , i=1) (i=1 ,i=2) (i=2, i=3) (i=3, i=4) (i=4 , i=5)=> condition fails   
+5 pairs                                                                         
 explanation 
 2>8 f, 2>7 f, 2>5 f 2>6 f
 8>7 t , 8>5 t , 8>6 t   (here (8,7) (8,5) (8,6) 3 pairs
