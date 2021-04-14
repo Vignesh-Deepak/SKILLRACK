@@ -1,0 +1,29 @@
+int main()
+{
+ 
+int N;
+scanf("%d,&N);
+int arr[N];
+for(int i=0;i<N;i++)
+{
+  int val,rev=0;
+  while(val>0)                    test case 1 eg 19  100 293 73       REV=  91 1 392 37   
+  {                               rev= 0+9 , val=1
+    rev=(rev*10)+(val%10);        1>0 rev=9*10+ 1
+    val=val/10;                   1/10 =0
+    }
+  arr[i]=val;
+}
+int mindiff=abs(arr[0]-arr[1]);       91- 1=90
+for(int i=0;i<N-1;i++)
+{
+   for(cmpindex=i+1;cmpindex<N;cmpindex++) //IMP CMPINDEX++= CMPINDEX+1;                          1ST COMPARISON  (91 1) (91 392) (91 37)   2ND  (1 392) (1 37)  3RD  (392 37) 
+   {
+      if(abs(arr[i]-arr[cmpindex])< mindiff)                                                        
+      {
+        mindiff=abs(arr[i]-arr[cmpindex]);
+        }
+     }
+ }
+ printf("%d",mindiff);
+ }
