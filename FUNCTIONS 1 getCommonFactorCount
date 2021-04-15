@@ -1,0 +1,26 @@
+#include <stdio.h>
+int func(int a, int b)
+{
+    int count=0,d;
+    if(a>b)               // hint 1st number can be greater or smaller it consider only common factor    // for beginner and best always consider condition a<b and take small
+     d=a;                 // these step can also be ignored 
+    else                  // also here eg d= 12(b>a)  factor 1 2 3 4 12  a=8 factor 1 2 4 8  b=12 
+     d=b;
+    for(int i=1;i<=d;i++)  // d can be smaller or larger 
+    {
+        if(a%i==0){                 eg 8 %8  12%8 (both false)     ,  8%9  12%9 (executes but also false) // important hint-> if both num are same,then smaller or greater no needed 
+            if(b%i==0)                             // also if both are same one condition can be omitted
+              count++;
+        }
+    }
+    return count;
+}
+
+
+int main()
+{
+    int m=8,n=12;
+    printf("%d",func(m,n));
+
+    return 0;
+}
