@@ -1,0 +1,9 @@
+int getFactorial( int N)
+{
+  long or unsigned fact=1;
+  for(int i=1;i<=N;i++)
+  {
+    fact=fact*i;
+   }
+   return fact;  // fact is  a integer so int should come before function  for returning integers
+}   
