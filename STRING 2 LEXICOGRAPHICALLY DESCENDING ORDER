@@ -5,7 +5,7 @@ int main()                    // LEXICOGRAPHICALLY MEANS PROPER ALPHABETICAL ORD
 {
     int N;                  // N REPRESENTS NO OF WORDS NOT CHARACTERS
     scanf("%d",&N);
-    char str[N][1001]; // DOUBT WHY 2 DIMENSION
+    char str[N][1001]; // DOUBT WHY 2 DIMENSION because N for number of inputs boundary condition , 1001 for string boundary condition
     int i=0;
     while(i<N)
     {
@@ -32,3 +32,13 @@ int main()                    // LEXICOGRAPHICALLY MEANS PROPER ALPHABETICAL ORD
 } 
 
 TEST CHASES 
+N=4                 iteration 1                                                                                   iteration 1      iteration 2     iteration 3     iteration 4      5
+project             1 p compare with e(already in lexicograph descending), 2 p compare with t(false change)        >tiger        time            time            time           time
+elephant                                                                                                            elephant     elephant        project         tiger          tiger
+tiger                                                                                                              >project      project         elephant        elephant       project
+time                                                                                                                time         tiger           tiger           project        elephant
+o/p
+time
+tiger
+project 
+elephant
