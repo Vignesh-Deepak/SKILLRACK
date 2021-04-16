@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()                    // LEXICOGRAPHICALLY MEANS PROPER ALPHABETICAL ORDER
+{
+    int N;                  // N REPRESENTS NO OF WORDS NOT CHARACTERS
+    scanf("%d",&N);
+    char str[N][1001]; // DOUBT WHY 2 DIMENSION
+    int i=0;
+    while(i<N)
+    {
+        scanf("%s",str[i]);
+        i++;
+    }
+    for(int i=0;i<N-1;i++)
+    {
+        for(int cmpindex=i+1;cmpindex<N;cmpindex++)
+        {
+            if(strcmp (str[i],str[cmpindex])<0)   // STRCMP < 0 MEANS IT IS IN PROPER ALPHABETICAL ORDER   => GIVING IT as condition 
+             {
+               char temp[1001];                   
+               strcpy(temp,str[i]);                   // similar to temp=str[i];
+               strcpy(str[i],str[cmpindex]);                        str[i]=str[cmpindex];
+               strcpy(str[cmpindex],temp);                          str[cmpindex]=temp;
+            
+             }
+        }
+        printf("%s",str[i]);
+    }
+    
+
+} 
+
+TEST CHASES 
