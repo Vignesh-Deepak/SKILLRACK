@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char str[100]; // DOUBT str[101]> extra one for null character
+    scanf("%c",str);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]!='a'||str[i]!='e'||str[i]!='i'||str[i]!='o'||str[i]!='u')
+        {
+            printf(".%c", str[i]);
+        }
+        
+    }
+
+}
+
+test case hello
+          .h.l.l
+          
+          
+incase of func
+int main()
+{
+    char str[100]; // DOUBT str[101]> extra one for null character
+    scanf("%c",str);
+    printf("%c",func(str[]);
+ } 
+ 
+int func(char str[])
+{
+ for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]!='a'||str[i]!='e'||str[i]!='i'||str[i]!='o'||str[i]!='u')
+        {
+            printf(".%c", str[i]);
+        }
+        
+    }
+    return str[];
+  }  
