@@ -1,0 +1,60 @@
+#include <stdio.h>
+int main() {
+    char str[1000], ch;
+    int count = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);// IMPORTANT CAN USE BOTH gets and fgets For reading a string value with spaces, we can use either gets() or fgets() in C programming language. Here, we will see what is the difference between gets() and fgets().
+
+//fgets()
+
+//It reads a line from the specified stream and stores it into the string pointed to by str. It stops when either (n-1) characters are read, the newline character is read, or the end-of-file is reached, whichever comes first.
+// gets()
+//Reads characters from the standard input (stdin) and stores them as a C string into str until a newline character or the end-of-file is reached.
+//It is not safe to use because it does not check the array bound.
+//It is used to read string from user until newline character not encountered.
+//Example : Suppose we have a character array of 15 characters and input is greater than 15 characters, gets() will read all these characters and store them into variable.Since, gets() do not check the maximum limit of input characters, so at any time compiler may return buffer overflow error.
+
+
+printf("Enter a character to find its frequency: ");
+    scanf("%c", &ch);    // HERE WE CHEKING ONLY A CHARACTER NOT A WORD OR STRING 
+
+    for (int i = 0; str[i] != '\0'; ++i) {
+        if (ch == str[i])
+            ++count;
+    }
+
+    printf("Frequency of %c = %d", ch, count);
+    return 0;
+}
+Enter a string: This website is awesome.
+Enter a character to find its frequency: e 
+Frequency of e = 4
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+  
+int main()
+{
+        char a[] = {"Geeks for"};
+        char b[] = {'G','e','e','k','s',' ','f','o','r'};
+        cout << "sizeof(a) = " << sizeof(a);
+        cout << "\nstrlen(a) = "<< strlen(a);
+        cout<<  "\nsizeof(b) = " << sizeof(b);
+        cout<<  "\nstrlen(b) = " << strlen(b);
+          
+        return 0;
+}
+The strlen function looks for a null character and behaves abnormally if it doesn’t find it.
+Output:
+
+sizeof(a) = 10
+strlen(a) = 9
+sizeof(b) = 9
+strlen(b) = 11
+Since size of char in C is 1 byte but then also we find that strlen() gave one less value than sizeof().
+
+Explanation : We know, that every string terminates with a NULL character (“\0”).
+strlen() searches for that NULL character and counts the number of memory address passed, So it actually counts the number of elements present in the string before the NULL character, here which is 8.
+sizeof() operator returns actual amount of memory allocated for the operand passed to it. Here the operand is an array of characters which contains 9 characters including Null character and size of 1 character is 1 byte. So, here the total size is 9 bytes.
