@@ -13,8 +13,9 @@ int main()
         if(len<10)
          printf("%c",str);
         else{
-            printf("%c%d%c",str[0],len-2,str(len-1) ); // or str(i-1) //len-1 = last element  len-2 = second last element  
-            
+            printf("%c%d%c",str[0],len-2,str(len-1) );  //len-1 = last element  len-2 = second last element  
+                                                        // str(i-1) = last character  
+                                                        // len-1= last length
         }
         
         
