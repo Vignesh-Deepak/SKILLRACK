@@ -1,0 +1,22 @@
+#include <stdio.h>    
+     
+int main()    
+{    
+    //Initialize array     
+    int arr[] = {1, 2, 3, 4, 5};     
+        
+    //Number of elements present in an array can be calculated as follows    
+    int length = sizeof(arr)/sizeof(arr[0]);       // size of int =2 each bytes  so total 10 bytes / 2 bytes = 5
+    printf("Number of elements present in given array: %d", length);     
+     
+    return 0;    
+}    
+
+
+#include<stdio.h>  
+#include <string.h>    
+int main(){    
+char ch[20]={'j', 'a', 'v', 'a', 't', 'p', 'o', 'i', 'n', 't', '\0'};    
+   printf("Length of string is: %d",strlen(ch));      // for first element strlen(ch[1])  for last element(ch[-1])    
+ return 0;    
+}    
