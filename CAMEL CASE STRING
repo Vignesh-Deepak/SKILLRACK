@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char S[101];
+    fgets(S,101,stdin);
+    for(int i=0;S[i]!='\0';i++)
+    {
+        printf("%s",tolower(S[i]));
+    }
+    if(isupper(str[i+1]))
+    {
+        printf(" ");
+    }
+    
+}
+EXPLANATION 
+CAMEL CASE- CAPITAL OR UPPER LETTERS 
+EG 1 WorldWideWeb - worldwideweb
+eg 2 VariableNames= variable names
