@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+  char str1[101],str2[101],vowel[101];
+  scanf("%c %c",str1,str2); //DOUBT - %s or %c for string if not using iteration scanf
+  int vowelindex=0;
+  for(int i=0;str2[i]!='\0';i++)
+  {
+     if(str2[i]=='a'||str2[i]=='e'||str2[i]=='i'||str2[i]=='o'||str2[i]=='u')
+     {
+        vowel[vowelindex]=str2[i];
+        vowelindex++;
+     }
+  }
+  int vowel_len=vowelindex;
+  int vowelindex=0;
+  for(int i=0; str1[i]!='\0';i++)
+  {
+     if(str1[i]=='a'||str1[i]=='e'||str1[i]=='i'||str1[i]=='o'||str1[i]=='u')
+     {
+         if(vowel_len!=0)// checking  whether str2 contains vowels or not
+         {
+             printf("%c",vowel[vowelindex]);
+             if(vowelindex+1!=vowel_len)// important 2 condition - 1 if there is no sufficient vowels in str2 to be replaced that vowel in the first string, then we need to consider last occured vowel in str2 to replace
+                                        // condition no 2- and also with the same condition we are checking that vowels count in str1 & vowels count in str2  is same or not (3 !=2)// here it also implies str1 contains one last vowel 
+                                        // vowelindex+1 => +1 next vowel present in str1 eg b  a    n     a       n                                   a 
+              vowelindex++;                                                          //   vowelindex=1   vowelindex+1                         (also)vowelindex+1
+         }                                                                                         //   (after incremented it becomes vowelindex=1)
+                                       //  
+         else
+         {
+             printf("a");// doubt 
+         }
+     }
+     else
+     {
+         printf("%c",str1[i]);
+     }
+  }
+  
+   
+}
