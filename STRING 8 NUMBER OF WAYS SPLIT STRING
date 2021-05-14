@@ -32,3 +32,6 @@ int main()
     printf("%d",no_of_ways);
 
 }
+test cases: acaca
+left=a right =c
+both side >0
