@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char str[101];
+    scanf("%c",str);
+    int leftalphacount[26]={0},rightalphacount[26]={0};
+    int len=strlen(str),no_of_ways=0;
+    for(int i=0;i<len;i++)
+    {
+        rightalphacount[str[i]-'a']++; // INITIALLY WE START COUNTING FROM RIGHT SIDE
+        
+    }
+    for(int i=1;i<len;i++)
+    {
+        leftalphacount[str[i]-'a']--;  // ADDING ON LEFT SIDE 
+        rightalphacount[str[i]-'a']++;// REMOVING ON RIGHT SIDE
+        int flag=1;
+        for(int alphaindex=0;alphaindex<26;alphacount++)
+        {
+            if(!(rightalphacount>0 && leftalphacount>0) || (rightalphacount==0 && leftalphacount==0)) // MAIN CONDITION  BOTH SIDE COUNT  MUST BE GREATER THAN OR EQUAL TO ZERO 
+            int flag=0;                                 // another way we can use the condition to check  and directly increase the number of ways.but intially flag must be zero and in else part,if the flag remains zero then number of ways remains zero 
+        }
+        
+    }
+    if(flag=1)
+    {
+        no_of_ways++;
+        
+    }
+    printf("%d",no_of_ways);
+
+}
