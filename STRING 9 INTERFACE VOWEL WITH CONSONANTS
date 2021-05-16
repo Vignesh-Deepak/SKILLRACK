@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    char str[1001];
+    scanf("%c",str);
+    int len =strlen(str);
+    int a=0,b=0,c=0;
+    char vowel[len],consonants[len];
+    for(int i=0;str[i]!='\0';i++)  
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
+          vowel[i]=str[i]; // important change over condition
+          a++;
+          b++;}
+        else
+          {
+            consonants[i]=str[i]; // important change over condition
+            a++;
+            c++;
+          }
+    }
+    for(int i=0;i<a;i++)
+    {
+        if(i<c)
+         printf("%c",consonants[i]);
+        if(i<b)
+          printf("%c",vowel[i]);
+    }
+    TEST CASE elephant
+              lepehant
+              our o/p is only e => because if the string contains vowels in continuos order then our logic is correct. if it is discontinuos then we should do
+    second method
+    #include <stdio.h>
+    #include <stdlib.h> 
+    int main()
+    { 
+    char str[1001]; 
+    scanf("%s",str); 
+    int len=strlen(str), consSize, vowelSize, printed=0, vowels[len], consonants[len], vowelIndex=0, consIndex=0,index; for(index=0; str[index]!='\0'; index++) { if(str[index]=='a' || str[index]=='e'||str[index]=='i' || str[index]=='o'||str[index]=='u') { vowels[vowelIndex++]=str[index]; } else { consonants[consIndex++]=str[index]; } } consSize = consIndex; vowelSize = vowelIndex; consIndex = vowelIndex = 0; 
+    while(printed < len) 
+    {
+    if(consIndex < consSize)
+    {
+    printf("%c",consonants[consIndex++]);
+    printed++;
+    } 
+    if(vowelIndex < vowelSize) 
+    {
+    printf("%c",vowels[vowelIndex++]);
+    printed++; 
+    }
+    }
+    return 0;
+    }
