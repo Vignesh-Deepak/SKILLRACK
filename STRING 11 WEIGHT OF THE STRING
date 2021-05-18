@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+   char str[101];
+   scanf("%c",str);
+   int weight=0;
+   for(int i=0;str[i]!='\0';i++)
+   {
+       char c=tolower(str[i]);
+       weight=weight+(ch-'a'+1); // important   eg b=2      98-97 +1 = 2
+       
+       
+   }
+   printf("%d",weight);
+   retunr 0;
+   
+   
+   
+}
