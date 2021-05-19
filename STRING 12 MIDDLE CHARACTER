@@ -18,29 +18,66 @@ int main()
     
   }
 }
-method 2 functions
-char or int character(*str)
-{
+method 2 functions 2 types
+type 1
+void character(*str) // void is used when nothing to be returned 
+{ 
+  
   for(int i=0;i<N;i++) 
   {
     scanf("%c",str);// comes in main or functions // when comes in functions are we have to create another simlar string for proceeding or not
     int len= strlen(str);
     if(len%2!=0){
     printf("%c\n",str[len/2]);
+   
     }
     else
-    {
-        printf("%c%c\n",str[len/2 -1],str[len/2]);  
+    { 
+        
+       printf("%c%c\n",str[len/2 -1],str[len/2]);  
     }
     
   }
-  return (doubt);
+  
 }
 int main()
 {
  int N;
  scanf("%d",&N);
  char str[101];
- scanf("%c",str) or fgets(str,101,stdin);
- character();
+ scanf("%s",str) or fgets(str,101,stdin);
+ character(); // in functions we cannot pass more than one parameter  
+ }
+ type 2
+char character(*str) // char is used when  to be returned 
+{ 
+  char b[3];// 2 even 1 odd
+  for(int i=0;i<N;i++) 
+  {
+    scanf("%c",str);// comes in main or functions // when comes in functions are we have to create another simlar string for proceeding or not
+    int len= strlen(str);
+    if(len%2!=0){
+    b[0]=str[len/2];
+    return b[0];
+   
+    }
+    else
+    { 
+       b[0]=str[len/2-1];
+       b[1]=str[len/2]; 
+       return b[0];  // return b is enough for both b element array
+       return b[1];  
+    }
+    
+  }
+  
+}
+int main()
+{
+ char b[3];// doubt 
+ int N;
+ scanf("%d",&N);
+ char str[101];
+ scanf("%s",str) or fgets(str,101,stdin);
+ character(b); // in functions we cannot pass more than one parameter  
  }
