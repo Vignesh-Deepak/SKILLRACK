@@ -49,12 +49,12 @@ int main()
  character(); // in functions we cannot pass more than one parameter  
  }
  type 2
-char character(*str) // char is used when  to be returned 
+char character(*str) // char is used when  to be returned   // we can also use another  string having different address but having same value as str (but use same parameter used in both) eventhough both are same variable they have different address 
 { 
   char b[3];// 2 even 1 odd
   for(int i=0;i<N;i++) 
   {
-    scanf("%c",str);// comes in main or functions // when comes in functions are we have to create another simlar string for proceeding or not
+    scanf("%c",str);// dont needed because already we got input from in main function , we can also as str1 similar to a as a1 here str as str1 both are same values but having different address they are accessed with reference or pointer for same value 
     int len= strlen(str);
     if(len%2!=0){
     b[0]=str[len/2];
@@ -66,7 +66,7 @@ char character(*str) // char is used when  to be returned
        b[0]=str[len/2-1];
        b[1]=str[len/2]; 
        return b[0];  // return b is enough for both b element array
-       return b[1];  
+       return b[1];// return b; is best => simple b is also resemble array because it is already declared , similar to pointer.   
     }
     
   }
@@ -74,10 +74,10 @@ char character(*str) // char is used when  to be returned
 }
 int main()
 {
- char b[3];// doubt 
+ //char b[3];// doubt here we dont need because it is completely belongs to function parameter
  int N;
  scanf("%d",&N);
  char str[101];
  scanf("%s",str) or fgets(str,101,stdin);
- character(b); // in functions we cannot pass more than one parameter  
+ printf("%s",character(b)); // in functions we cannot pass more than one parameter  
  }
