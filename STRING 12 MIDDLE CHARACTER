@@ -1,0 +1,46 @@
+
+int main()
+{
+  int N;
+  scanf("%d",&N);
+  char str[101];
+  for(int i=0;i<N;i++) // IF N AND STRING COMES FIRST ITERATION SHOULD BE TILL N AND SECOND CAN BE BASED ON STR[I]!='\0'
+  {
+    scanf("%c",str);
+    int len= strlen(str);
+    if(len%2!=0){
+    printf("%c\n",str[len/2]);
+    }
+    else
+    {
+        printf("%c%c\n",str[len/2 -1],str[len/2]);  // IF EVEN COMES TWO MIDDLE CHARACTERS
+    }
+    
+  }
+}
+method 2 functions
+char or int character(*str)
+{
+  for(int i=0;i<N;i++) 
+  {
+    scanf("%c",str);// comes in main or functions // when comes in functions are we have to create another simlar string for proceeding or not
+    int len= strlen(str);
+    if(len%2!=0){
+    printf("%c\n",str[len/2]);
+    }
+    else
+    {
+        printf("%c%c\n",str[len/2 -1],str[len/2]);  
+    }
+    
+  }
+  return (doubt);
+}
+int main()
+{
+ int N;
+ scanf("%d",&N);
+ char str[101];
+ scanf("%c",str) or fgets(str,101,stdin);
+ character();
+ }
