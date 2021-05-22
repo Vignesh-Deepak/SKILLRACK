@@ -1,0 +1,64 @@
+int main()
+{
+char str[101];
+scanf("%[^\n]",str); // when it comes for string i/p counts until space , when space counters string stops
+for(int i=0;str[i]!='\0';i++)
+{
+  // if ("%s",str[i]) => each word is considered as string , not each character 
+  printf("%c",str[i]);
+  if(str[i]==','||str[i]=='.'||str[i]=='!'||str[i]=='?')
+  {
+    printf(" ");
+    }
+ }
+ 
+ 
+ method 1
+ 
+ void remove_punctuation(char str[])
+ {
+    for(int i=0;str[i]!='\0';i++)
+     {
+  // if ("%s",str[i]) => each word is considered as string , not each character 
+   printf("%c",str[i]);
+   if(str[i]==','||str[i]=='.'||str[i]=='!'||str[i]=='?')
+   {
+    printf(" ");
+    }
+    }
+ 
+ }
+ int main()
+ {
+   char str[101];
+   scanf("%[^\n]",str);
+   remove_punctuation();
+   }
+   
+method 2
+
+void remove_punctuation(char *str)
+{
+   for(int i=0;str[i]!='\0';i++)
+{
+  // if ("%s",str[i]) => each word is considered as string , not each character 
+  //printf("%c",str[i]);
+  if(str[i]==','||str[i]=='.'||str[i]=='!'||str[i]=='?')
+  {
+    printf(" ");  
+    }
+    
+ }
+ return str;
+
+}
+
+ int main()
+ {
+  char str[101];
+   scanf("%[^\n]",str);
+   printf("%s",remove_punctuation(str));
+   }
+ 
+ 
+    
