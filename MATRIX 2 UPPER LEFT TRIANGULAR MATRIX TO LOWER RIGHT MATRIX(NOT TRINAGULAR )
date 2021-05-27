@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int Matrix[N][N];
+    for(int row=0;row<N;row++)
+    {
+        for(int col=0;col=N-row;col++)// column have to decrease by one while adding for each iteration
+        {
+            scanf("%d",&Matrix[row][col]);
+            printf("%d",Matrix[row][col]);// upper left triangular matrix
+        }
+    
+    for(int invertrow=row-1;invertrow>=0;invertrow--)  STARTS FROM last row here last row =3
+    {
+        printf("%d",matrix[invertrow][N-row-1]); // N-row-1 is for last column  [invertrow=3-1] [4-3-1=0] fails [2][
+                                                                                [0
+                                                                                [
+    }
+    
+   } 
+
+}
+Input: 4
+3 7 3 7
+3 2 8
+4 8
+9
+Output 
+3 7 3 7 
+3 2 8 3
+4 8 2 7
+9 4 3 3 
+Explanation:
+The upper left triangle elements are
+3 7 3 7
+3 2 8
+4 8
+9 
+The inverted upper left trianlge (lower right triangle) elements are
+* * * 7    // SEE HERE FOR INVERT ROW CONCEPT THE LAST COLUMN IS 
+* * 8 3
+* 8 2 7
+9 4 3 3 
+Now the elements in the matrix are 
+3 7 3 7
+3 2 8 3
+4 8 2 7 
+9 4 3 3 
+Example Input/Output 2: Input: 5 
+37 11 37 18 37
+62 29 32 58
+62 91 75 
+80 11
+53
+Output: 
+37 11 37 18 37 
+62 29 32 58 18
+62 91 75 32 37
+80 11 91 29 11 
+53 80 62 62 37
