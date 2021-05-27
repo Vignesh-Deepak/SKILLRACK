@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+  int N,X;
+  scanf("%d %d",&N,&X);
+  int colcount=1;
+  for(int row=1;row<=X;row++)
+  {
+      int printval=row*N;// EVERY ROW FIRST ELEMENT OPERATION AND THEN IT IS INCREMENTED TILL COLCOUNT
+      for(int col=1;col<=colcount;col++)// COL<COLCOUNT IMPORTANT 
+      {
+          printf("%d",printval);
+          printval++;
+      }
+      printf("\n");
+      colcount=colcount*2; // SUCCEEDING ROWS ARE POWER OF 2 OF ELEMENTS 
+  }
+  
+}
+TEST CASE
+Input:
+8 5 
+Output:
+8  POWER OF COLUMN 1
+16 17 POWER OF COLUMN 2
+24 25 26 27 POWER OF COLUMN 4
+32 33 34 35 36 37 38 39 POWER OF COLUMN 8
+40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 POWER OF COLUMN 16
