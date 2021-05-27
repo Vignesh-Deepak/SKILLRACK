@@ -16,9 +16,9 @@ int main()
    for(int i=0;i<N;i++)
    {
        for(int j=0;j<N;j++)
-       {
-           if(Mat[i][j]!=Mat[j][i]) COUNT WHEN ORIGINAL AND TRANSPOSE ARE NOT HAVING EQUAL ELEMENTS
-           flipcount++;
+       {                            
+           if(Mat[i][j]!=Mat[j][i]) // COUNT WHEN ORIGINAL AND TRANSPOSE ARE NOT HAVING EQUAL ELEMENTS
+           flipcount++;              // IF ORIGINAL AND TRANSPOSE MATRIX COUNT'S SAME WHEN BOTH HAVING EQUAL ELEMENTS ALSO ,O/P =4
        }
    }
    printf("%d",flipcount);
