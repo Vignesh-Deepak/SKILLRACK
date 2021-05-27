@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+   int N;
+   scanf("%d",&N);
+   int Mat[N][N],flipcount=0;
+   for(int i=0;i<N;i++)
+   {
+       for(int j=0;j<N;j++)
+       {
+           scanf("%d",&Mat[i][j]);
+       }
+   }
+   for(int i=0;i<N;i++)
+   {
+       for(int j=0;j<N;j++)
+       {
+           if(Mat[i][j]!=Mat[j][i]) COUNT WHEN ORIGINAL AND TRANSPOSE ARE NOT HAVING EQUAL ELEMENTS
+           flipcount++;
+       }
+   }
+   printf("%d",flipcount);
+                                                                              
+}
+TEST CASE 
+ 1 1             AFTER TRANSPOSE  1 0
+ 0 0                              1 0              
+ 
+ TEST CASE 2
+ 0 0 1    0TH ROW     0  1   1     HINT 1 DIAGONAL REMAINS SAME                  CHANGES OCCUR 01 ,10,12(SECOND ROW LAST ELEMENT),22   TOTAL COUNT 4
+ 1 1 1    1ST ROW     0  1   0                                                               
+ 1 0 0    2ND ROW     1  1   0  
