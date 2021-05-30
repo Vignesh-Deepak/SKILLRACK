@@ -1,0 +1,25 @@
+#include <stdio.h> 
+#include <stdlib.h>
+int main() 
+{
+  int N; 
+  scanf("%d", &N);  
+  int row, col, diff, printVal = N; 
+  for(row = 1; row <= N; row++)
+  {
+    diff = (row % 2 != 0) ? 2 : 3; // ROW =1
+    for(col = 1; col <= N; col++)
+    {
+      printf("%d ", printVal); //NUMBER =2(1ST ITERATION)   4(2ND ITERATION)
+      printVal += diff; // HERE PRINTVAL = 4+2 =6
+      }
+      (row % 2 != 0) ? printVal++ : printVal--; //PRINTVAL= 6+1;
+      printf("\n"); 
+      }
+      return 0;
+      }
+      O/P 
+      TEST CASE
+      N=2
+      2 4
+      7 10
