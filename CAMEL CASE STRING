@@ -9,10 +9,12 @@ int main()
     {
         printf("%s",tolower(S[i]));
     }
+    If(str of A ascii value of A and ascii value of Z
     if(isupper(str[i+1]))
     {
         printf(" ");
     }
+    
     
 }
 EXPLANATION 
