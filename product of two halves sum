@@ -10,7 +10,7 @@ int main()
     {                          
         scanf("%d",&arr[i]);
     }
-    int i,left =0, right= i-1;
+    int left =0, right= N-1;
     int leftsum=0, rightsum=0;
     while(left<right)
     {
