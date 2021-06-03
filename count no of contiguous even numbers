@@ -17,7 +17,8 @@ int main()
                                //that is> when no operation needed when required is founded , both(any one) can be used for printf, when not directing to printf , it has some other extra operation then N-1 is best for all
                                // here eg i=4 & i=5 ends  , i=5 and i=6(>N) fails because eventhough it currcount =3 if condition fails so it goes to else again currcount becomes 1 so N-1 loop terminates with if condition and check in printf atlast
         {
-            currcount++;
+            currcount++; // currcount=0 currcount =1 does not resemble even  state 
+                         //for that initially take currcount as 1 and incremental to 2 for our understanding 
         }
         else
         {
@@ -30,7 +31,7 @@ int main()
         }
         
  
-        printf("%d ",(max>currcount)? max:currcount);  
+        printf("%d ",(max>currcount)? max:currcount);  //if last 2 number are even number then else does not execute;we are unable to check last element is contiguous even number for that we use ternary operation for which one is bigger 
     }
 
 }
