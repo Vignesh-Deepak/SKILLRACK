@@ -46,7 +46,7 @@
        if(row!=col) // add elements other than diagonal elements because diagonal elements have same rows and cols 11,22,33,44
        sum+= abs(mat[row][col]);  // add 1st row all col elements
        }
-       if(abs(mat[row][row]<sum)  
+       if(abs(mat[row][row]<sum) //doubt how to check for >= sum condition   
         printf("NO");
     }   
  for(int row=0;row<N;row++)
