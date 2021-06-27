@@ -62,6 +62,8 @@ int main()
         if(diagonalsum==rowsum[i]&& diagonalsum==colsum[i])
         {
             printf("Yes");
+             //here the YES print for N no of times , here 5 times ->given o/p is YES CHECKS ONLY FOR ONE SUM OF EACH ROW AND SUM OF EACH COL WITH DIAGONAL 
+            FOR one Yes use break or return 0;
         }                           
         // IF INCASE IF WE WANT TO PRINT EACH MATRIX ROW BY ROW WE HAVE TO USE PRINT ("\n");
     }
