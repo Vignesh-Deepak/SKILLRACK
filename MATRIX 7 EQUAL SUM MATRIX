@@ -1,0 +1,72 @@
+Equal Sum Matrix 
+The program must accept an integer matrix of size NxN as the input. 
+The program must print Yes if sum of each row and sum of each column are equal to the sum of left diagonal elements.
+Else the program must print No as the output.
+Boundary Condition(s):
+3 <= N <= 50 
+Input Format:
+The first line contains the value of N.
+The next N lines contains N integers separated by space(s).
+Output Format:
+The first line contains either Yes or No.
+Example Input/Output 1:
+Input: 5
+1 2 3 4 5
+2 3 4 5 1 
+3 4 5 1 2 
+4 5 1 2 3 
+5 1 2 3 4 
+Output: Yes 
+Example Input/Output 2: 
+Input: 4
+1 2 3 4
+2 3 4 1
+3 4 1 2
+4 2 3 1 
+Output: No
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int mat[N][N];
+    int rowsum[N],colsum[N],diagonalsum=0;
+    // int rowsum[N]={0}; here we cant apply like these, because N is unknown 
+    //int colsum[N]={0};
+    // or instead we can also use for loop for array to assign zero for every iteration
+   for(int i=0;i<N;i++)
+   {
+       rowsum[i]=0;
+       colsum[i]=0;
+   }
+    for(int row=0;row<N;row++) 
+    {
+        for(int col=0;col<N;col++)
+        {
+            scanf("%d",&mat[row][col]);
+            rowsum[row]+=mat[row][col]; //first full row added with entire iteration and assigned to index 1
+            colsum[col]+=mat[row][col]; // in first row all elements are assigned to each index (not added)
+            if(row==col)
+            {
+                diagonalsum+=mat[row][col];
+                
+            }
+            
+        }
+    }
+    for(int i=0;i<N;i++)
+    {
+        //always checks for 'no' to easy ending  if(diagonalsum!=rowsum[i]&& diagonalsum!=colsum[i])
+        if(diagonalsum==rowsum[i]&& diagonalsum==colsum[i])
+        {
+            printf("Yes");
+        }                           
+        // IF INCASE IF WE WANT TO PRINT EACH MATRIX ROW BY ROW WE HAVE TO USE PRINT ("\n");
+    }
+    return 0; //similar to break 
+    printf("No");
+    
+
+}
