@@ -1,4 +1,4 @@
-Diagonal Constant Matrix 
+Diagonal Constant Matrix or toeplitz matrix 
 The program must accept an integer matrix of size RxC as the input.
 A diagonal-constant matrix is a matrix in which all the elements in each left diagonal are same.
 The program must print YES if it is a diagonal-constant matrix.
