@@ -1,0 +1,87 @@
+the program must accept a character matrix of size rxc as the input.
+the program must print the column which has the maximum number of vowels as the output. 
+if more than one column have the same number of vowels then print the first occurring column.
+note: alphabets are only in lower case.
+boundary condition(s): 
+1 <= r, c <= 100
+input format: the first line contains the values of r and c separated by a space.
+the next r lines contain c alphabets separated by a space.
+output format:
+the first r lines contain the alphabets as per the given condition.
+example input/output 1:
+input: 6 5
+a n e i b u
+t r h c k s
+f v p k j m
+r o i e o q
+o l g q q x 
+output: 
+a
+u
+k
+k
+i
+l
+explanation: the 1st column has 3 vowels.
+the 2nd column has 1 vowel.
+the 3rd column has 2 vowels.
+the 4th column has 1 vowel.
+the 5th column has 2 vowels.
+the maximum number of vowels in the 1st column.
+hence the 1st column is printed.
+example input/output 2:
+input: 7 3 
+e q m f i i s
+k u f b a k e
+g x c v a o p 
+output: 
+q
+i
+k
+b
+e
+c
+o
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int R,C;
+    int Vowelcount=0,MaxVowelcount=0,Maxvolcol=0;
+    scanf("%d %d",&R,&C);
+    char mat[R][C],str[2];// each character is executed with a space and enters into the string each time traversed string[1] and extra one string[2] is for null character
+    for(int row=0;row<R;row++)
+    {
+        for(int col=0;col<C;col++)
+        {
+            scanf("%s",str);// since getting it as a string
+            mat[row][col]=str[0]; //character of first index of the string is stored to mat
+            
+        } 
+    }
+    for(int row=0;row<R;row++)
+    {
+        for(int col=0;col<C;col++)
+        {
+            char ch= mat[row][col];//store matrix in ch
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+            {
+                Vowelcount++;
+            }
+            
+            
+        }
+    }
+    if(Vowelcount>MaxVowelcount) // initially maxVowelcount=0
+    {
+        MaxVowelcount=Vowelcount;  
+        Maxvolcol=col; // that particular  vowelcount column which has max vowel is stored
+    }
+    for(int row=0;row<R;row++)
+    {
+        printf("%c\n",mat[row][Maxvolcol]);//particular maxvolcol only
+    }
+
+}
