@@ -52,7 +52,8 @@ int main()
             scanf("%d",mat[R][C]);
             if(mat[R][C]==0)
             {
-                zerorows[row]=1;
+                zerorows[row]=1;// CHANGES BASED ON NO OF ZEROS, HERE NO OF ZEROS IS 1 
+                //THAT'S WHY WE USED OR CONDITION IN LAST FOR LOOP(ZEROES VARIES FOR BOTH ROWS&COLS IN SECOND TEST CASE
                 zeroCols[col]=1;
             }
         }
