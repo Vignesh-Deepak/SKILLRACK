@@ -1,0 +1,72 @@
+The program must accept a character matrix of size NxN as the input.
+The program must print the alphabets in 'N' format in the matrix as the output.
+Boundary Condition(s):
+1 <= N <= 50
+Input Format: The first line contains the integer N.
+The next N lines contain N characters separated by spaces.
+Output Format:
+The first line contains the alphabets in 'N' format the matrix.
+Example Input/Output 1:
+Input: 4
+r t u o
+k l a d
+j h d g
+v b m z
+Output: rkjvldzgdo 
+Explanation: 
+r t u o 
+k l a d 
+j h d g
+v b m z 
+Example Input/Output 2: 
+Input: 5 
+k o E n f
+v g Y j M 
+z d R t g
+n J I s x
+M l P q S
+Output: kvznMgRsSxgMf
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    // here it consist of 3 logic
+    
+    //in first col 
+    // 00 =r 01=k, 02=j,03=v
+    // 2nd logic diagonal elements=>that is all identical index
+    //atlast 3rd logic if last element is identical [3][3] print that current col 
+    
+    int N;
+    scanf("%d",&N);
+    char mat[N][N],str[2]; // DOUBT WHY STRING IS 2 
+    for(int row=0;row<N;row++)
+    {
+        for(int col=0;col<N;col++)
+        {
+            scanf("%c",mat[row][col]);
+            mat[row][col]=str[0];// first character is assigned to matrix [0][0]
+            if(col==0)
+            printf("%c",mat[row][col]); // first checks for [0][0]
+            // goes out increment row [1][0]
+                                //    [2][0]
+            
+        }
+    }
+    //check identical is in two way
+    //1= taking new index as diagonalindex
+    //here diagonal index we going to print from second col so diagonalindex=1
+    for(int diagonalindex=1;diagonalindex<N;diagonalindex++)
+    {
+        printf("%c",mat[diagonalindex][diagonalindex]);
+    }
+    //row is only changing col is fixed and printed in reverse direction
+     
+     // for changing we take N and then perform operation on it
+     // 
+    for(int row=N-2;row>=0;row--)
+    {
+        printf("%c",mat[row][N-1]);
+    }
+}
