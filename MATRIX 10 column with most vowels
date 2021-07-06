@@ -51,11 +51,16 @@ int main()
     int R,C;
     int Vowelcount=0,MaxVowelcount=0,Maxvolcol=0;
     scanf("%d %d",&R,&C);
+    
     char mat[R][C],str[2];// each character is executed with a space and enters into the string each time traversed string[1] and extra one string[2] is for null character
+    // or char str; str is not a string it is a character (it is best)
     for(int row=0;row<R;row++)
     {
         for(int col=0;col<C;col++)
         {
+            // or scanf("%c",str); (it is best)
+            here we dont need to assign character to mat[row][col] because it is a character not a string 
+            
             scanf("%s",str);// since getting it as a string
             mat[row][col]=str[0]; //character of first index of the string is stored to mat
             
