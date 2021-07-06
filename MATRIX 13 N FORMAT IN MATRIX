@@ -40,11 +40,12 @@ int main()
     
     int N;
     scanf("%d",&N);
-    char mat[N][N],str[2]; // DOUBT WHY STRING IS 2 
+    char mat[N][N],str[2]; // DOUBT WHY STRING IS 2 or simple char str (not string only character)
     for(int row=0;row<N;row++)
     {
         for(int col=0;col<N;col++)
         {
+            //(optional)scanf("%c",str); if we used these we dont need string and also assigning str[0] to mat[row][col] 
             scanf("%c",mat[row][col]);
             mat[row][col]=str[0];// first character is assigned to matrix [0][0]
             if(col==0)
@@ -56,6 +57,7 @@ int main()
     }
     //check identical is in two way
     //1= taking new index as diagonalindex
+    //2= if(row==col)
     //here diagonal index we going to print from second col so diagonalindex=1
     for(int diagonalindex=1;diagonalindex<N;diagonalindex++)
     {
