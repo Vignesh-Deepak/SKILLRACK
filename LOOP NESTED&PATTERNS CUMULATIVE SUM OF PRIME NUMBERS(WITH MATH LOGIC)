@@ -1,0 +1,51 @@
+The program must accept an integer N as the input.
+The program must print the cumulative sum of the first N prime integers as the output.
+Boundary Condition(s): 
+1 <= N <= 100
+Example Input/Output 1:
+Input: 5
+Output: 
+2 5 10 17 28
+Example Input/Output 2: 
+Input: 8 
+Output:
+2 5 10 17 28 41 58 77
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    int printcount=0,cumulativesum=0;
+    int value=2; // forsolving prime number it consist of two ways
+    // 1 way-> basically prime number which is always divisble by 1 that's why we starts from next number (eg check 7 is prime or not , for that we check condition from 2 to N-1(6) it should not be divisible by any of these number for prime
+    // 2 way basic math formula for more accuracy 
+    // condition starts from 2 to sqrt of the number
+    // eg for 80 sqrt of 80=8.9 nearly 9 
+    // if it not divisible between 2 to 9 then it prime (that it we wont need to check until 79  memory is saved)
+    while(printcount<N)
+    {
+        int flag=0;
+        double sqrtVal=sqrt(value);
+        for(int i=2;i<=sqrtVal;i++)
+        {
+         if(value%i==0)
+          {
+            flag=1;
+            break;// exits for loop
+          }
+         
+        }
+        if(flag==0)
+        {
+            cumulativesum+=value;
+            printf("%d",cumulativesum);
+            printcount++;
+        }
+        value++;
+    }
+}
+//have doubt if we bind 2 for loop in one then we compulsorily need 2 conditions or one is enough
+// in case of for loop for(int value=2,printcount=0;printcount<N;printcount++,value++) value>0;(extra condition)
