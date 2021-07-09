@@ -1,0 +1,65 @@
+The program must accept the starting time and the ending time in 24Hrs format hh:mm:ss as the input.
+The program must print the time of each second from the starting time to the ending time as the output.
+Boundary Condtion(s): 
+1 <= hh <= 24 0 <= mm, ss <= 59 
+Starting time <= Ending time
+Example Input/Output:
+Input: 11:59:55 TO 12:00:05 
+Output:
+11:59:55
+11:59:56
+11:59:57
+11:59:58
+11:59:59
+12:00:00
+12:00:01
+12:00:02
+12:00:03
+12:00:04
+12:00:05
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{ 
+    //very important
+   //when the hour is 10 last minute to  be  printed is 59
+   // same for hour 11 last min is 59
+   // but for hour 12 last min is 36 and sec is 05
+   //HERE THEY DIDNT CHECK HRS CONDITION 1 TO 24 IF SO
+   //int maxhrs=(startHH==endHH)?endHH:24; 
+   int startHH,startMM,startSS;
+   int endHH,endMM,endSS;
+   scanf("%d: %d: %d:",&startHH,&startMM,&startSS);//i/p start time
+   scanf("%d: %d: %d:",&endHH,&endMM,&endSS);// i/p end time
+   for(int hourscount=startHH;hourscount<=endHH;hourscount++)
+   {
+       
+       /*if(hourscount==endHH) 
+       {
+            int maxmin=endMM;
+       }
+       else
+       {
+            maxmin=59;
+           }*/
+      
+       int maxmin=(hourscount==endHH)?endMM:59; //for checking max min because if not endMM is specified by default assign to 59 and also for if specified checks till last  
+       for(int mincount=startMM;mincount<=maxmin/*endMM*/;mincount++)
+       {
+         int maxsec=(hourscount==endHH && mincount==endMM)?endSS:59;
+         for(int seccount=startSS;seccount<=maxsec;seccount++)
+         {
+           printf("%02d: %02d: %02d\n",hourscount,mincount,seccount);// every time current hr,min,sec is printed ,new line after each full time\n
+           
+             
+         }
+         int seccount=0;// again goes to start after full time printed
+           
+       }
+       int mincount=0;//again goes to start
+       
+   }
+   
+}
