@@ -33,10 +33,11 @@ int main()
     scanf("%d",&N);
     for(int row=0;row<N;row++)
     {
-        for(int col=0;col<N;col++)
+        for(int col=0;col<row(important);col++)  //col<N important o/p comes as aBcDeFgH in one line
+                                    //for to print like pattern row must change for each col iteration 
         {
             if(ctr%2==0)
-            //for to check Z it is not possible because count 0 to 25 so for that add %26 to ctr
+            //here it checks till z for again to repeat from a it should not go to 27 for that add %26
             {
                 printf("%c", ctr%26+'a'); 
             }
