@@ -1,0 +1,53 @@
+The program must accept an integer N as the input.
+The program must print the desired pattern as shown in the Example Input/Output sections.
+Boundary Condition(s):
+2 <= N <= 32
+Example Input/Output 1:
+Input: 4 
+Output:
+a
+B c
+D e F
+g H i J
+Example Input/Output 2: 
+Input: 8
+Output:
+a
+B c
+D e F
+g H i J
+k L m N o
+P q R s T u
+V w X y Z a B
+c D e F g H i J
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    //a=0,B=1,c=2,D=3
+    //alphabet at even position are in lower case
+    //alphabet at odd position are in upper case 
+    int N;
+    int ctr=0;//control
+    scanf("%d",&N);
+    for(int row=0;row<N;row++)
+    {
+        for(int col=0;col<N;col++)
+        {
+            if(ctr%2==0)
+            //for to check Z it is not possible because count 0 to 25 so for that add %26 to ctr
+            {
+                printf("%c", ctr%26+'a'); 
+            }
+            else
+            {
+                printf("%c",ctr%26+'A'); 
+            }
+            ctr++;
+        }
+    }
+
+}
+
+//ternary operator printf("%c",ctr%2==0?ctr%26+'a':ctr%26+'A');
