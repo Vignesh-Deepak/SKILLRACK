@@ -3,7 +3,7 @@ For each integer T (among N integers) the program must print the first T lowerca
 Boundary Condition(s):
 2 <= N <= 30
 1 <= Each integer value <= 26 (these condition is just to resemble alphabet ->maximum allowed number is 26 after than these it shows error because after than that it contains special characters ,here we dont need to worry because testcase does not exit it)
-(if after z again if you want to start with a then you should add %26 to ch
+(if after z again if you want to start with a then you should add %26 to CURRNUM 
 Example Input/Output 1:
 Input: 4
 8 3 10 1
@@ -31,7 +31,7 @@ int main()
         int currNum;
         ch='a';
         scanf("%d",currNum);
-        while(ch<'a'+currNum)//number can be added to alphabet(ascii) eg here a=97
+        while(ch<'a'+currNum)//number can be added to alphabet(ascii) eg here a=97 ,here until z you want, then the condition currnum%26
         {
             printf("%c ", ch);
         }
