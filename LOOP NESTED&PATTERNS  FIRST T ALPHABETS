@@ -31,11 +31,16 @@ int main()
         int currNum;
         ch='a';
         scanf("%d",currNum);
-        while(ch<'a'+currNum)//number can be added to alphabet(ascii) eg here a=97 ,here until z you want, then the condition currnum%26
+        /*if(currNum<=26)//these condtion more than enough  to again to start from a & also for terminate at z
+        {
+          
+          */ 
+        while(ch<'a'+currNum)//number can be added to alphabet(ascii) eg here a=97 ,here until z you want, then the condition currnum%26 for that currnum should again starts from zero for that initially give it as currnum=0
         {
             printf("%c ", ch);
         }
         ch++;
+        //} for if closing
     }
     printf("\n");
 
