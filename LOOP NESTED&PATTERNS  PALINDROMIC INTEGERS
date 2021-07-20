@@ -1,0 +1,57 @@
+The program must accept N integers as the input.
+The program must print only the integers which are palindrome.
+If there is no palindromic integer in the given N integers then the program must print -1 as the output.
+Boundary Condition(s):
+1 <= N <= 100
+Example Input/Output 1:
+Input: 5
+6776
+8989
+25252
+181
+323
+Output:
+6776
+25252
+181
+323
+Example Input/Output 2:
+Input: 3
+1010
+2221
+3233
+Output: -1
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int N;
+    int flag=0;
+    scanf("%d",&N);
+    for(int ctr=1;ctr<=N;ctr++)
+    {
+       int Num;
+       scanf("%d",Num);
+       int currNum=Num;
+       int revsum=0;
+     while(Num>0)
+     { 
+       revsum=(revsum*10)+Num%10; //eg 181 (0+1) (10+8) (180+1)
+       Num/=10;
+      
+      }
+    }
+    if(revsum==currNum)
+    {
+        flag=1;
+        printf("%d\n",currNum);
+    }
+    if(flag==0)
+    {
+        printf("-1");
+    }
+    
+
+}
