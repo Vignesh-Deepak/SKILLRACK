@@ -64,14 +64,14 @@ int main()
     {
         for(int col=0;col<N;col++)
         {
-            if(X==mat[row][col])
+            if(X==mat[row][col])//****important
             {
-                xrow=row; //current row is assigned to xrow    here  mat[3][3]=12
+                xrow=row; //current row is assigned to xrow    here  mat[3][3]=12    //these 2 lines xrow=row ,xcol=col;
                 xcol=col; //current col
                 flag=1;
                 break; //exit immediate loop
             }
-            // it exits col forloop    
+            // it exits only col forloop    
             
         }
         if(flag==1)
@@ -84,7 +84,8 @@ int main()
     }
     
     int count=0;
-    // traverse top check logic diagram in gallery
+    // traverse top
+    //check logic diagram in gallery
     for(int row=xrow-1;row>=0;row--) // here col is same ,row decrement  
     //always checking starts from X  1st=[3][3] 
                                 // 2nd=[2][3]
