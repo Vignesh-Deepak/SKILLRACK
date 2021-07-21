@@ -10,7 +10,7 @@ Example Input/Output 1:
 Input: 4
 r t u o
 k l a d
-j h d g
+j h d g  
 v b m z
 Output: rkjvldzgdo 
 Explanation: 
@@ -41,7 +41,7 @@ int main()
     int N;
     scanf("%d",&N);
     char mat[N][N],str[2]; // DOUBT WHY STRING IS 2 or simple char str (not string only character)
-    for(int row=0;row<N;row++)
+    for(int row=0;row<N;row++) //best consider row =1; row<=N
     {
         for(int col=0;col<N;col++)
         {
