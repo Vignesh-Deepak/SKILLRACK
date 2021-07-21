@@ -49,3 +49,50 @@ int main()
 }
 //have doubt if we bind 2 for loop in one then we compulsorily need 2 conditions or one is enough
 // in case of for loop for(int value=2,printcount=0;printcount<N;printcount++,value++) value>0;(extra condition)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+N=5,flag=0;
+for(int val=2;val<=N;val++)
+{
+  double sqrtval=sqrt(val);
+  for(ctr=2;ctr<=sqrtval;ctr++)
+  {
+     if(val%ctr==0)
+      {
+        flag=1;
+        break;
+       }
+    }
+    if(flag==0)
+    {
+       cumsum+=val;
+       printf("%d",cumsum);
+       
+      
+    }
+    
+}
+
+
+
+
+
