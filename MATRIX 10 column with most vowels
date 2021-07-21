@@ -9,12 +9,13 @@ the next r lines contain c alphabets separated by a space.
 output format:
 the first r lines contain the alphabets as per the given condition.
 example input/output 1:
-input: 6 5
-a n e i b u
-t r h c k s
-f v p k j m
-r o i e o q
-o l g q q x 
+input: 6 5 [c][r]
+a n e i b
+u t r h c
+k s f v p
+k j m r o
+i e o q o
+l g q q x 
 output: 
 a
 u
@@ -30,10 +31,14 @@ the 5th column has 2 vowels.
 the maximum number of vowels in the 1st column.
 hence the 1st column is printed.
 example input/output 2:
-input: 7 3 
-e q m f i i s
-k u f b a k e
-g x c v a o p 
+input: 7 3   [c][r]
+e q m
+f i i
+s k u
+f b a 
+k e g
+x c v
+a o p 
 output: 
 q
 i
