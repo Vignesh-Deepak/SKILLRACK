@@ -86,7 +86,7 @@ int main()
     int count=0;
     // traverse top
     //check logic diagram in gallery
-    for(int row=xrow-1;row>=0;row--) // here col is same ,row decrement  
+    for(int row=xrow-1;row>=0;row--) // here col is same ,row decrement      //also with N for(int row =N-4;row>0;row--) here N=6 row =2 ,then decrement row=1 .
     //always checking starts from X  1st=[3][3] 
                                 // 2nd=[2][3]
                                 //last=[1][3]
