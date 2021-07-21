@@ -6,19 +6,23 @@ int main()
     int N;
     scanf("%d",&N);
     int Matrix[N][N];
-    for(int row=0;row<N;row++)
+    for(int row=1;row<=N;row++)
     {
-        for(int col=0;col=N-row;col++)// column have to decrease by one while adding for each iteration
+        for(int col=1;col=N-row;col++)// column have to decrease by one while adding for each iteration
         {
             scanf("%d",&Matrix[row][col]);
             printf("%d",Matrix[row][col]);// upper left triangular matrix
         }
     
-    for(int invertrow=row-1;invertrow>=0;invertrow--)  STARTS FROM last row here last row =3
+    for(int invertrow=row-1;invertrow>=0;invertrow--)  STARTS FROM last row here last row =4 (that is the above row goes to 0th row or 1th row)
     {
-        printf("%d",matrix[invertrow][N-row-1]); // N-row-1 is for last column  [invertrow=3-1] [4-3-1=0] fails [2][
-                                                                                [0
-                                                                                [
+        printf("%d",matrix[invertrow][N-row-1]); // N-row-1 is for last column we read in the input [invertrow=4-1] [4-4-1=0]= 4 [3th row ][1st col]
+                                                                                                                               3
+                                                                                                           3
+                                                                      in first test case last row =4   9 4  3 3 
+                                                                      in 2nd case        last row =3   4 8  2 7
+                                                                                 
+                                          
     }
     
    } 
