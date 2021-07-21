@@ -37,9 +37,9 @@ int main()
        unsigned long int val;
        scanf("%llu",val); //eg 1 10001110-142 
        int onescount=0,zeroscount=0;
-       while(val>0)
+       while(val>0)// in place of val 142- its binary  number is entered 
        {
-           if(val%10==1) //%10 add only unit digit
+           if(val%10==1) //%10 add only unit digit   val=10001110
            {
                onescount++;
            }
