@@ -1,3 +1,26 @@
+The program must accept a string S and an integer N as the input.
+The program must print the Nth non-repeating character as the output.
+Note: The string contains at least N non-repeating characters.
+Boundary Condition(s):
+3 <= Length of string S <= 100
+1 <= N <= 26 
+Input Format:
+The first line contains the value of string S.
+The second line contains the value of N.
+Output Format:
+The first line contains the Nth non-repeating character.
+Example Input/Output 1:
+Input:
+HELLO 
+3 
+Output: O 
+Explanation: N = 3, the first non-repeating character is H. The second non-repeating character is E. The third non-repeating character is O. Hence O is printed as the output.
+Example Input/Output 2:
+Input:
+aaaaabbbcdfecdpqpq 
+2 
+Output:
+e
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -15,7 +38,7 @@ int main()
     int nonrepeatchar=0;
     for(int i=0;str[i]!='\0';i++) // AGAIN ITERATING FOR CHECKING 
     {
-        if(charcount[str[i]])                         
+        if(charcount[str[i]]==1)                         
         {
             nonrepeatchar++; // here non repeated is checked for all characters(string) not for each character eg H(non repeated) nonrepeat=1 ,E(non repeated) nonrepeat=2, L(non repeated) nonrepeat=3, L( repeated) nonrepeat=becomes again 2 from 3 ,0(non repeated) nonrepeat=3   
             if(nonrepeatchar==N)
@@ -36,7 +59,7 @@ charcount[E]++
 charcount[L]++
 charcount[0]++
 
-if(charcount[H])
+if(charcount[H]==1)
 nonrepeatchar=1
 if (nonrepeatchar==N)// N can be any index of the character element for eg here N=1 first non repeatchar=H is printed
 if(charcount[E])
