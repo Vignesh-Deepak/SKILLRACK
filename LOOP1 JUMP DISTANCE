@@ -1,0 +1,29 @@
+Ravi needs to go home from the office.
+The distance X is passed as the input to the program.
+He travels 1 meter in his first jump, 10 meters in his second jump, 19 meters in his third jump, 28 meters in his fourth jump, 37 meters in his fifth jump and so on.
+The program must print the step in which he reaches his home as the output.
+Example 
+Input/Output 1:
+Input: 15    [INITIALLY HERE THESE TWO TEST CASES DIFFER WITH GIVEN DATA , THAT IS HERE AS PER DATA GIVEN USED , OUTPUT IS 2 ,THEREFORE JUMPDISTANCE IS VARIED AS 5 
+Output: 3
+Example Input/Output 2: Input: 67 Output: 5
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int X,jumpcount=0;
+    scanf("%d",&X);
+    int distancecovered=0,jumpdistance=1;
+    while(distancecovered<X)
+    {
+        distancecovered+=jumpdistance;
+        jumpdistance+=9;
+        jumpcount++;
+    }
+    printf("%d",jumpcount);
+    
+    
+
+}
+
