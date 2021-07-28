@@ -30,13 +30,16 @@ int main()
     scanf("%d",&N);  // IMPORTANT N IS NOT FOR SIZE OF STRING , IT IS FOR CHECKING
     char str[101];
     int charcount[128]={0};       // ASCII VALUE OF CHARACTERS VARIES FROM 0 TO 127
-    for(int i=0;str[i]!='\0';i++) // INCREMENTING IT BY ASSIGNING EACH CHARACTER TO CHARCOUNT ARRAY 
+    int len = strlen(str);
+    for(int i=0;str[i]!='\0';i++)   // or here i<len also can be used
+                                   // INCREMENTING IT BY ASSIGNING EACH CHARACTER TO CHARCOUNT ARRAY 
     {
         scanf("%s",str[i]);
         charcount[str[i]]++;
     }
     int nonrepeatchar=0;
-    for(int i=0;str[i]!='\0';i++) // AGAIN ITERATING FOR CHECKING 
+    for(int i=0;str[i]!='\0';i++)   // or here i<len also can be used
+                                    // AGAIN ITERATING FOR CHECKING 
     {
         if(charcount[str[i]]==1)                         
         {
