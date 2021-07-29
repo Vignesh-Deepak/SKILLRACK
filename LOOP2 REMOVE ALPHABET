@@ -1,0 +1,57 @@
+The program must accept two alphabets CH1 and CH2 as the input.
+The program must print the output based on the following conditions.
+- If CH1 is either 'U' or 'u' then print all the uppercase alphabets except CH2.
+- If CH1 is either 'L' or 'l' then print all the lowercase alphabets except CH2.
+- For any other values of CH1 then print INVALID.
+Example Input/Output 1:
+Input:
+U v 
+Output:
+A B C D E F G H I J K L M N O P Q R S T U W X Y Z 
+Example Input/Output 2:
+Input:
+L C
+Output:
+a b d e f g h i j k l m n o p q r s t u v w x y z
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int count=0;
+    char CH1,CH2;
+    scanf("%c %c",&CH1,&CH2);
+    CH1=toupper(CH1);// these condition is not mandatory
+    if(CH1=='U'||CH1=='u') //here condition satisfying can be either of two
+    {
+        CH2=toupper(CH2);//these change is important than first condition
+        char alpha='A';
+        while(alpha<='Z')
+        {
+            if(alpha!=CH2) //here ch2 is considered as upper because comparing with upper as per output
+            {
+                printf("%c",alpha);
+            }
+        }
+        alpha++;
+    }
+    else if(CH1=='L'||CH1=='l')
+    {
+        CH2=tolower(CH2);
+        char alpha='a';
+        while(alpha<='z')
+        {
+            if(alpha!=CH2)//here ch2 is considered as lower because comparing with lower as per output
+            {
+                printf("%c",alpha);
+            }
+        }
+        alpha++;
+      
+    }
+    else
+    {
+        printf("INVALID");
+    }
+
+}
