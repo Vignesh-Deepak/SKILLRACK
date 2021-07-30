@@ -1,3 +1,41 @@
+The program must accept N string values as the input.
+The program must print the N string values sorted lexicographically in descending order as the output.
+Note: All the alphabets are lowercase in each string.
+Boundary Condition(s):
+1 <= N <= 50
+1 <= Length of each string <= 1000
+Input Format:
+The first line contains the integer N.
+The next N lines each contain a string.
+Output Format:
+The first N lines each contain a string after sorted lexicographically in descending order.
+Example Input/Output 1:
+Input:
+4
+project
+elephant
+tiger
+time
+Output:
+time
+tiger
+project 
+elephant
+Example Input/Output 2: 
+Input:
+5
+orange
+watermelon
+pineapple
+lemon
+strawberry
+Output:
+watermelon
+strawberry
+pineapple
+orange
+lemon
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -19,7 +57,7 @@ int main()                    // LEXICOGRAPHICALLY MEANS PROPER ALPHABETICAL ORD
             if(strcmp (str[i],str[cmpindex])<0)   // (check first character occurence of the word are same) STRCMP < 0 MEANS IT IS IN PROPER ALPHABETICAL ORDER   => GIVING IT as condition 
              {
                char temp[1001];                   
-               strcpy(temp,str[i]);                   // similar to temp=str[i];
+               strcpy(temp,str[i]);                   // similar to temp=str[i]; 
                strcpy(str[i],str[cmpindex]);                        str[i]=str[cmpindex];
                strcpy(str[cmpindex],temp);                          str[cmpindex]=temp;
             
@@ -33,12 +71,12 @@ int main()                    // LEXICOGRAPHICALLY MEANS PROPER ALPHABETICAL ORD
 
 TEST CHASES                                                                                                     (imp= one swap at a iteration) 
 N=4                 iteration 1                                                                                   iteration 1      iteration 2     iteration 3     iteration 4      5
-project             1 p compare with e(already in lexicograph descending), 2 p compare with t(false change)        >tiger        time            time            time           time
-elephant                                                                                                            elephant     elephant        project         tiger          tiger
+project             1 p compare with e(already in lexicograph descending),                                          >tiger        time            time            time           time
+elephant            2 p compare with t(false change)                                                                elephant     elephant        project         tiger          tiger
 tiger                                                                                                              >project      project         elephant        elephant       project
 time                                                                                                                time         tiger           tiger           project        elephant
 o/p
 time
-tiger
+tiger                                                                                                                         
 project 
 elephant
