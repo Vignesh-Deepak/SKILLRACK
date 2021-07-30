@@ -1,0 +1,48 @@
+The program must accept two integers N1 and N2 containing the same number of digits.
+The program must print the sum of N1 and N2 in reverse order.
+Note: All the trailing zeroes in sum must be removed.
+Boundary Condition(s):
+2 <= N1, N2 <= 999999
+Example Input/Output 1:
+Input:
+1233
+3456
+Output:
+9864 
+Example Input/Output 2:
+Input:
+245
+155
+Output:
+4
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+  int N1,N2;
+  scanf("%d %d",&N1,&N2);
+  int currnum1=N1;
+  int currnum2=N2;
+  int revsum=0;
+  int sum=N1+N2;
+  while(sum>0)
+  {
+      revsum=(revsum*10)+(sum%10);  //important revsum*10 
+      // here 1st case 9      468 
+      //      2nd case 90+8   46
+      //      3rd case 980+6  4
+      //      4th case 9860+4  after taking 4 it stops at 4 th case
+      
+        sum=sum/10;
+      
+  }
+  //if(revsum%10!=0)// here we dont need to remove zeros , it automatically does not take it ,check below 2nd test case 
+  
+      printf("%d",revsum);
+  
+}
+
+
+//2nd case 
+// sum = 400
