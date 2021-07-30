@@ -72,7 +72,7 @@ int main()                    // LEXICOGRAPHICALLY MEANS PROPER ALPHABETICAL ORD
 TEST CHASES                                                                                                     (imp= one swap at a iteration) 
 N=4                 iteration 1                                                                                   iteration 1      iteration 2     iteration 3     iteration 4      5
 project             1 p compare with e(already in lexicograph descending),                                          >tiger        time            time            time           time
-elephant            2 p compare with t(false change)                                                                elephant     elephant        project         tiger          tiger
+elephant            2 p compare with t(false change) swap p with tiger                                              elephant     elephant        project         tiger          tiger
 tiger                                                                                                              >project      project         elephant        elephant       project
 time                                                                                                                time         tiger           tiger           project        elephant
 o/p
