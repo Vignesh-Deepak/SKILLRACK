@@ -1,3 +1,22 @@
+The program must accept a string S as the input.
+First, the program must print all the alphabets in S,
+then the digits in S followed by the symbols in S in the given order as the output.
+Boundary Condition(s):
+2 <= Length of String <= 1000
+Input Format:
+The first line contains the string S.
+Output Format:
+The first line contains the alphabets, then the digits followed by the symbols in S in the given order.
+Example Input/Output 1:
+Input:
+12Man?Won
+Output:
+ManWon12?
+Explanation: The alphabets in "12Man?Won" are ManWon The digits in "12Man?Won" are 12 The symbols in "12Man?Won" is ? Hence the output is ManWon12? is printed.
+Example Input/Output 2:
+Input:
+?,goal22fight?lost
+Output: goalfightlost22?,?
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -14,7 +33,7 @@ int main()
     for(int i=0; str[i]!='\0';i++)
     {
         if(isdigit(str[i]))
-          printf("%s",str[i]);
+          printf("%s",str[i]); //%S IS IMPORTANT
           
     }
     for(int i=0; str[i]!='\0';i++)
